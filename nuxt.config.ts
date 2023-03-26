@@ -12,7 +12,43 @@ export default defineNuxtConfig({
       mode: "out-in",
     },
   },
-  modules: ["@nuxtjs/html-validator"],
+  // @ts-ignore
+  modules: [
+    "@nuxtjs/html-validator",
+    "nuxt-viewport",
+    "nuxt-svgo",
+    "nuxt-bugsnag",
+    "nuxt-graphql-client",
+    "@nuxtjs/robots",
+    "nuxt-simple-sitemap",
+  ],
+  robots: {
+    /* module options */
+  },
+  bugsnag: {
+    config: {
+      apiKey: "e393f1f2c7de3393da3c6edc10a56ab4",
+      enabledReleaseStages: ["production"],
+    },
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://example.com",
+    },
+  },
+  "graphql-client": {
+    clients: {
+      default: {
+        host: process.env.HYGRAPH_ENDPOINT as string,
+        // Advanced
+        token: {
+          type: "Bearer",
+          name: "Authorization",
+          value: process.env.BEARER,
+        },
+      },
+    },
+  },
   css: ["~/assets/scss/main.scss"],
   vite: {
     css: {

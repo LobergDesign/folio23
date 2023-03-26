@@ -6,12 +6,14 @@
       {{ appConfig }}
     </pre>
     <a-btn />
-
-    <NuxtPage />
+    <icon-arrow aria-hidden="true" />
+    <nuxt-page />
   </div>
 </template>
 <script setup>
+import IconArrow from "~/assets/icons/arrow.svg";
 const appConfig = useAppConfig();
+// useBugsnag().notify("Some Error");
 </script>
 <style>
 .page-enter-active,

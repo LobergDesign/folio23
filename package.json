@@ -9,10 +9,20 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.7.1",
     "@nuxtjs/html-validator": "^1.2.4",
     "@types/node": "^18.15.9",
     "nuxt": "^3.3.2",
+    "nuxt-simple-sitemap": "^2.2.0",
+    "nuxt-svgo": "^1.1.0",
+    "nuxt-viewport": "^2.0.3",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.1"
+  },
+  "dependencies": {
+    "@nuxtjs/robots": "^3.0.0",
+    "nuxt-bugsnag": "^5.9.1",
+    "nuxt-graphql-client": "^0.2.27",
+    "pinia": "^2.0.33"
   }
 }

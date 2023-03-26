@@ -1,0 +1,11 @@
+query getFrontpage {
+  frontpages {
+    createdAt
+    id
+    publishedAt
+    updatedAt
+    heroSection {
+      title
+    }
+  }
+}
