@@ -6,7 +6,5 @@
 </template>
 <script lang="ts" setup>
 const result = await GqlGetFrontpage();
-
-console.log("result", result);
 </script>
 <style scoped></style>

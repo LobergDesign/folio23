@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
   bugsnag: {
     config: {
-      apiKey: "e393f1f2c7de3393da3c6edc10a56ab4",
+      apiKey: process.env.BUGSNAG_API_KEY,
       enabledReleaseStages: ["production"],
     },
   },
