@@ -36,6 +36,11 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://example.com",
     },
   },
+  // when running `nuxt generate` you can specify the routes to prerender "static"
+  nitro: {
+    prerender: { routes: ["/about"] },
+  },
+
   "graphql-client": {
     clients: {
       default: {
