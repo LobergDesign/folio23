@@ -7,6 +7,9 @@
       <li>
         <nuxt-link to="/about">About</nuxt-link>
       </li>
+      <li>
+        <nuxt-link to="/admin/dashboard">dashboard</nuxt-link>
+      </li>
     </ul>
   </header>
 </template>

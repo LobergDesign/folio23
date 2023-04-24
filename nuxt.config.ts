@@ -12,6 +12,7 @@ export default defineNuxtConfig({
       mode: "out-in",
     },
   },
+
   // @ts-ignore
   modules: [
     "@nuxtjs/html-validator",
@@ -22,23 +23,31 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "nuxt-simple-sitemap",
   ],
+
   robots: {
     /* module options */
   },
+
   bugsnag: {
     config: {
       apiKey: process.env.BUGSNAG_API_KEY,
       enabledReleaseStages: ["production"],
     },
   },
+
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://example.com",
     },
   },
+
   // when running `nuxt generate` you can specify the routes to prerender "static"
-  nitro: {
-    prerender: { routes: ["/about"] },
+  // nitro: {
+  //   prerender: { routes: ["/about"] },
+  // },
+  routeRules: {
+    // Render these routes with SPA
+    "/admin/**": { ssr: false },
   },
 
   "graphql-client": {
@@ -54,7 +63,9 @@ export default defineNuxtConfig({
       },
     },
   },
+
   css: ["~/assets/scss/main.scss"],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -64,5 +75,9 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  devtools: {
+    enabled: true,
   },
 });

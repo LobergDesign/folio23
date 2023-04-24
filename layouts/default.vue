@@ -1,13 +1,14 @@
 <template>
   <div>
     <o-header />
-    <h1>folio 2023</h1>
+    <slot />
     <pre>
-      {{ appConfig }}
+      appConfig: {{ appConfig }}
     </pre>
-    <a-btn />
+    <div>
+      <a-btn />
+    </div>
     <icon-arrow aria-hidden="true" />
-    <nuxt-page />
   </div>
 </template>
 <script setup>
@@ -15,12 +16,12 @@ import IconArrow from "~/assets/icons/arrow.svg";
 const appConfig = useAppConfig();
 // useBugsnag().notify("Some Error");
 useHead({
-  title: "My App",
+  title: "LAYOUT",
   meta: [{ name: "description", content: "My amazing site." }],
   bodyAttrs: {
     class: "test",
   },
-  script: [{ innerHTML: "console.log('Hello world')" }],
+  // script: [{ innerHTML: "console.log('Hello world')" }],
 });
 </script>
 <style>
