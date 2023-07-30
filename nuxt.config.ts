@@ -15,10 +15,8 @@ export default defineNuxtConfig({
 
   // @ts-ignore
   modules: [
-    "@nuxtjs/html-validator",
     "nuxt-viewport",
     "nuxt-svgo",
-    "nuxt-bugsnag",
     "nuxt-graphql-client",
     "@nuxtjs/robots",
     "nuxt-simple-sitemap",
@@ -26,13 +24,6 @@ export default defineNuxtConfig({
 
   robots: {
     /* module options */
-  },
-
-  bugsnag: {
-    config: {
-      apiKey: process.env.BUGSNAG_API_KEY,
-      enabledReleaseStages: ["production"],
-    },
   },
 
   runtimeConfig: {
@@ -75,9 +66,5 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-
-  devtools: {
-    enabled: true,
   },
 });
