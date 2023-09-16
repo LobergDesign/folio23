@@ -25,6 +25,9 @@ export default defineNuxtConfig({
   robots: {
     /* module options */
   },
+  sitemap: {
+    /* module options */
+  },
 
   runtimeConfig: {
     public: {
@@ -32,13 +35,11 @@ export default defineNuxtConfig({
     },
   },
 
-  // when running `nuxt generate` you can specify the routes to prerender "static"
-  // nitro: {
-  //   prerender: { routes: ["/about"] },
-  // },
   routeRules: {
     // Render these routes with SPA
     "/admin/**": { ssr: false },
+    "/": { prerender: true },
+    "/about": { prerender: true },
   },
 
   "graphql-client": {

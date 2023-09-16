@@ -1,4 +1,4 @@
-query getFrontpage {
+query GetFrontpage {
   frontpages {
     createdAt
     id
