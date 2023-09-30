@@ -1,12 +1,12 @@
 <template>
   <div>
-    <o-header />
+    <organisms-header />
     <slot />
     <pre>
       appConfig: {{ appConfig }}
     </pre>
     <div>
-      <a-btn />
+      <atoms-btn />
     </div>
     <icon-arrow aria-hidden="true" />
   </div>

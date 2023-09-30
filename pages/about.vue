@@ -1,13 +1,13 @@
 <template>
   <div>
     <div>Page: about</div>
-    <pre>
-  useFetch:  {{ data }}
-  </pre
-    >
+    <pre v-if="!openMeteoPending && openMeteoData">
+      useWeather:  {{ openMeteoData }}
+
+      icon: <lazy-atoms-weather-icon v-if="openMeteoData.current_weather.weathercode" :code="openMeteoData.current_weather.weathercode" />
+  </pre>
   </div>
 </template>
 <script lang="ts" setup>
-const { data } = await useFetch("/api/hello");
+const { data: openMeteoData, pending: openMeteoPending } = await useOpenMeteo();
 </script>
-<style scoped></style>

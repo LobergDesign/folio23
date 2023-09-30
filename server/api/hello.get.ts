@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async () => {
   // setInterval(() => {
   //   console.log("event interval");
   // }, 3000);

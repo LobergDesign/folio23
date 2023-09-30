@@ -18,16 +18,16 @@ export default defineNuxtConfig({
     "nuxt-viewport",
     "nuxt-svgo",
     "nuxt-graphql-client",
-    "@nuxtjs/robots",
-    "nuxt-simple-sitemap",
+    // "@nuxtjs/robots",
+    // "nuxt-simple-sitemap",
   ],
 
-  robots: {
-    /* module options */
-  },
-  sitemap: {
-    /* module options */
-  },
+  // robots: {
+  //   /* module options */
+  // },
+  // sitemap: {
+  //   /* module options */
+  // },
 
   runtimeConfig: {
     public: {
@@ -67,5 +67,8 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  imports: {
+    dirs: ["composables/**"],
   },
 });
