@@ -16,8 +16,8 @@ export default defineNuxtConfig({
   // @ts-ignore
   modules: [
     "nuxt-viewport",
-    "nuxt-svgo",
     "nuxt-graphql-client",
+    "nuxt-icons",
     // "@nuxtjs/robots",
     // "nuxt-simple-sitemap",
   ],

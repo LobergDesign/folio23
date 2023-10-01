@@ -1,59 +1,66 @@
 <template>
-  <div>{{ setIcon }}</div>
+  <nuxt-icon class="weather-icon" :name="`weather/${setIcon}_icon`" filled />
 </template>
 <script lang="ts" setup>
-const props = defineProps<{
-  code: number;
-}>();
+const props = withDefaults(
+  defineProps<{
+    code: number;
+    isDay: number;
+  }>(),
+  {
+    isDay: 1, // 1 is day, 0 is night
+  }
+);
 
 const setIcon = computed(() => {
   // https://open-meteo.com/en/docs#hourly=temperature_2m,weathercode
   // icons: https://github.com/basmilius/weather-icons/blob/dev/design/fill/final/drizzle.svg
   // day/night?
+  const dayCheck = props.isDay === 1;
+  console.log("dayCheck", dayCheck);
   switch (props.code) {
     case 0:
-      return "clear-day";
+      return dayCheck ? "clear-day" : "clear-night";
     case 1:
     case 2:
-      return "clouds";
+      return dayCheck ? "cloudy" : "partly-cloudy-night";
     case 3:
-      return "overcast";
+      return dayCheck ? "overcast" : "overcast-night";
     case 45:
     case 48:
-      return "fog";
+      return dayCheck ? "fog" : "fog-night";
     case 51:
     case 53:
     case 55:
-      return "drizzle";
     case 56:
     case 57:
-      return "freezing-drizzle";
+      return dayCheck ? "drizzle" : "overcast-night-drizzle";
     case 61:
     case 63:
     case 65:
-      return "rain";
     case 66:
     case 67:
-      return "freezing-rain";
+      return dayCheck ? "rain" : "overcast-night-rain";
     case 71:
     case 73:
     case 75:
-      return "snow-fall";
     case 77:
-      return "snow-grains";
+      return dayCheck ? "snow" : "overcast-night-snow";
     case 80:
     case 81:
     case 82:
-      return "rain-showers";
+      return dayCheck ? "extreme-rain" : "extreme-night-rain";
     case 85:
     case 86:
-      return "snow-showers";
+      return dayCheck ? "extreme-snow" : "extreme-night-snow";
     case 95:
     case 96:
     case 99:
-      return "thunderstorm";
+      return dayCheck
+        ? "thunderstorms-day-extreme-rain"
+        : "thunderstorms-night-overcast-rain";
     default:
-      return "unknown";
+      return "cloudy";
   }
 });
 </script>

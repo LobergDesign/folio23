@@ -5,5 +5,6 @@ declare namespace OpenMeteoNamespace {
   export interface IWeather {
     weathercode: number;
     temperature: number;
+    is_day: 1 | 0;
   }
 }

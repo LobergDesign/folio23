@@ -17,7 +17,7 @@
     "nuxt": "^3.7.4",
     "nuxt-graphql-client": "^0.2.30",
     "nuxt-simple-sitemap": "^3.3.5",
-    "nuxt-svgo": "^3.5.4",
+    "nuxt-icons": "^3.2.1",
     "nuxt-viewport": "^2.0.6",
     "pinia": "^2.1.6",
     "sass": "^1.68.0",

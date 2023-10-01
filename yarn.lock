@@ -7734,6 +7734,7 @@ __metadata:
     "@types/node": ^20.7.2
     nuxt: ^3.7.4
     nuxt-graphql-client: ^0.2.30
+    nuxt-icons: ^3.2.1
     nuxt-simple-sitemap: ^3.3.5
     nuxt-svgo: ^3.5.4
     nuxt-viewport: ^2.0.6
@@ -7760,6 +7761,15 @@ __metadata:
     ohash: ^1.1.2
     scule: ^1.0.0
   checksum: 6171dc2a5bf4361d4c196b483facffafa5b3494ba406fc325f3d37fa95ae23b8f9661f9c4b63ecb29efa14e395433b38af1cc1c815951e94c246d55677eeb048
+  languageName: node
+  linkType: hard
+
+"nuxt-icons@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "nuxt-icons@npm:3.2.1"
+  dependencies:
+    "@nuxt/kit": ^3.0.0
+  checksum: a502aaf86277b6231a2ad2da94e170ee4121270e7073c1fdd7edc0b793da05050ce58f3963a47e1df6b0711240e3cf803c43e2efc06b5349dacfdf5d4fbd2b00
   languageName: node
   linkType: hard
 

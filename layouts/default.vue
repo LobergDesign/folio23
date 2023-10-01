@@ -8,7 +8,6 @@
     <div>
       <atoms-btn />
     </div>
-    <icon-arrow aria-hidden="true" />
   </div>
 </template>
 <script setup>
