@@ -15,9 +15,8 @@ const props = withDefaults(
 const setIcon = computed(() => {
   // https://open-meteo.com/en/docs#hourly=temperature_2m,weathercode
   // icons: https://github.com/basmilius/weather-icons/blob/dev/design/fill/final/drizzle.svg
-  // day/night?
+
   const dayCheck = props.isDay === 1;
-  console.log("dayCheck", dayCheck);
   switch (props.code) {
     case 0:
       return dayCheck ? "clear-day" : "clear-night";
@@ -64,4 +63,4 @@ const setIcon = computed(() => {
   }
 });
 </script>
-<style scoped src="./weatherIcon.scss" />
+<style src="./weatherIcon.scss" />

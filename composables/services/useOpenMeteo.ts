@@ -5,5 +5,6 @@ export default async () => {
   return await useGetLazyData<OpenMeteoNamespace.ICurrentWeather>({
     url: `https://api.open-meteo.com/v1/forecast?latitude=${cphLatitude}&longitude=${cphLongitude}&current_weather=true`,
     pick: ["current_weather"],
+    immediate: false,
   });
 };
