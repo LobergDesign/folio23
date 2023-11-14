@@ -9,19 +9,20 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^0.8.5",
-    "@nuxt/image": "^0.7.1",
+    "@nuxt/devtools": "latest",
     "@nuxtjs/robots": "^3.0.0",
-    "@pinia/nuxt": "^0.4.11",
-    "@types/node": "^20.7.2",
-    "nuxt": "^3.7.4",
-    "nuxt-graphql-client": "^0.2.30",
-    "nuxt-simple-sitemap": "^3.3.5",
+    "@pinia/nuxt": "^0.5.1",
+    "@types/node": "^20.9.0",
+    "nuxt": "^3.8.1",
+    "nuxt-graphql-client": "^0.2.31",
     "nuxt-icons": "^3.2.1",
+    "nuxt-simple-sitemap": "^4.1.0",
     "nuxt-viewport": "^2.0.6",
-    "pinia": "^2.1.6",
-    "sass": "^1.68.0",
+    "pinia": "^2.1.7",
+    "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
-    "vite-plugin-vsharp": "^1.5.4"
+    "vite-plugin-vsharp": "^1.5.4",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
   }
 }
