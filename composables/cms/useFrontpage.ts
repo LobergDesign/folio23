@@ -1,1 +1,1 @@
-export default async () => await useFetch("/api/hello");
+export default async () => await useGetData({ url: "/api/frontpage" });

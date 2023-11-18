@@ -6,6 +6,7 @@
   data: {{ data }}
   </pre
     >
+    <div v-html="data.frontpage.heroSection.title.html"></div>
   </div>
 </template>
 <script lang="ts" setup>
