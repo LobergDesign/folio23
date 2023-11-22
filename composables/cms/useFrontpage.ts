@@ -1,1 +1,1 @@
-export default async () => await useGetData({ url: "/api/frontpage" });
+export default async () => (await GqlGetFrontpage()) as Frontpage.IPage;

@@ -10,8 +10,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-const { data } = await useFrontpage();
+const data = await useFrontpage();
 
-// console.log("data", data.api);
+console.log("data", data);
 // console.log("data result", data.result);
 </script>

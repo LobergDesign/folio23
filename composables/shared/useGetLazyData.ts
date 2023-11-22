@@ -1,8 +1,4 @@
-export default async <T>({
-  url,
-  pick,
-  immediate = true,
-}: GlobalNamespace.IFetch) => {
+export default async <T>({ url, pick, immediate = true }: Global.IFetch) => {
   const { data, error, execute, pending, status } = await useLazyFetch<T>(
     `${url}`,
     {

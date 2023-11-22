@@ -18,10 +18,25 @@ export default defineNuxtConfig({
     "nuxt-viewport",
     "nuxt-graphql-client",
     "nuxt-icons",
+    "@nuxtjs/google-fonts",
+    "nuxt-purgecss",
+    "nuxt-security",
     // "@nuxtjs/robots",
     // "nuxt-simple-sitemap",
   ],
-
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy:
+        process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+    },
+  },
+  purgecss: {
+    enabled: true, // Always enable purgecss
+    safelist: ["nuxt-icon, weather-icon"], // Add my-class token to the safelist (e.g. .my-class)
+  },
+  // googleFonts: {
+  //   // https://google-fonts.nuxtjs.org/getting-started/setup
+  // },
   // robots: {
   //   /* module options */
   // },
@@ -62,8 +77,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData:
-            '@use "@/assets/scss/config/_vars.scss" as *; @use "@/assets/scss/utils/_mixins.scss" as *;',
+          additionalData: '@use "@/assets/scss/config/_settings.scss" as *;',
         },
       },
     },

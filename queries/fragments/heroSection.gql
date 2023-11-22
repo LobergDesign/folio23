@@ -1,8 +1,0 @@
-fragment FragmentHeroSection on Frontpage {
-  heroSection {
-    title {
-      html
-    }
-    text
-  }
-}

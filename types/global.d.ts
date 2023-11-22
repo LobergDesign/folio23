@@ -1,4 +1,14 @@
-declare namespace GlobalNamespace {
+declare namespace Global {
+  // CMS components
+  export interface IRte {
+    html: string;
+  }
+  export interface IHeroSection {
+    title: GlobalIRte;
+    text: string;
+  }
+
+  // API
   export interface IFetch {
     url: string;
     pick?: KeysOf<unknown> | undefined;
