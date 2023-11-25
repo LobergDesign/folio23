@@ -34,9 +34,14 @@ export default defineNuxtConfig({
     enabled: true, // Always enable purgecss
     safelist: ["nuxt-icon, weather-icon"], // Add my-class token to the safelist (e.g. .my-class)
   },
-  // googleFonts: {
-  //   // https://google-fonts.nuxtjs.org/getting-started/setup
-  // },
+  googleFonts: {
+    families: {
+      // @ts-ignore
+      Inter: { wght: [100 + ".." + 700] },
+    },
+    display: "swap",
+    preload: true,
+  },
   // robots: {
   //   /* module options */
   // },
@@ -52,7 +57,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     // Render these routes with SPA
-    "/admin/**": { ssr: false },
     "/": { prerender: true },
     "/about": { prerender: true },
   },

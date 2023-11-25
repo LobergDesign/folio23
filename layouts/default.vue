@@ -5,9 +5,6 @@
     <pre>
       appConfig: {{ appConfig }}
     </pre>
-    <div>
-      <atoms-btn />
-    </div>
   </div>
 </template>
 <script setup>

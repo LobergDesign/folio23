@@ -11,12 +11,13 @@ const props = withDefaults(
     isDay: 1, // 1 is day, 0 is night
   }
 );
-
+console.log("props.code", props.code);
 const setIcon = computed(() => {
   // https://open-meteo.com/en/docs#hourly=temperature_2m,weathercode
   // icons: https://github.com/basmilius/weather-icons/blob/dev/design/fill/final/drizzle.svg
 
   const dayCheck = props.isDay === 1;
+
   switch (props.code) {
     case 0:
       return dayCheck ? "clear-day" : "clear-night";
