@@ -37,7 +37,5 @@ const {
   pending: openMeteoPending,
   status: openMeteoStatus,
   execute,
-} = await useOpenMeteo();
+} = await useOpenMeteoImmediate();
 </script>
-
-<style src="./topbar.scss" scoped />

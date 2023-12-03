@@ -1,0 +1,136 @@
+/////// GRID ///////
+// viewport
+$vp-small: 640px;
+$vp-medium: 768px;
+$vp-large: 1025px;
+$vp-extra-large: 1280px;
+
+// wrapper
+$wrap-max-width: 180rem;
+$wrap-width: 90vw;
+
+// display grid settings
+$gap: clamp(1rem, 2vw, 2rem);
+$col: 12;
+
+// wrap
+.wrap {
+  width: $wrap-width;
+  max-width: $wrap-max-width;
+  margin: 0 auto;
+}
+
+// row
+.row {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  grid-gap: $gap;
+  padding-bottom: $gap;
+  > * {
+    grid-column-end: span $col;
+  }
+}
+.col {
+  grid-column-end: span $col;
+}
+// column
+@for $i from 1 through $col {
+  .col-#{$i} {
+    grid-column-end: span $i;
+  }
+}
+
+// responsive
+@each $size, $abbr in ($vp-small, sm), ($vp-medium, md), ($vp-large, lg),
+  ($vp-extra-large, xl)
+{
+  @media (min-width: $size) {
+    @for $i from 1 through $col {
+      .col-#{$abbr}-#{$i} {
+        grid-column-end: span $i;
+      }
+    }
+  }
+}
+
+// "start"
+@for $i from 1 through $col {
+  .col-start-#{$i} {
+    grid-column-start: $i;
+  }
+}
+
+// responsive start
+@each $size, $abbr in ($vp-small, sm), ($vp-medium, md), ($vp-large, lg),
+  ($vp-extra-large, xl)
+{
+  @media (min-width: $size) {
+    @for $i from 1 through $col {
+      .col-start-#{$abbr}-#{$i} {
+        grid-column-start: $i;
+      }
+    }
+  }
+}
+
+// helping classes
+.no-gap {
+  grid-gap: 0;
+}
+.no-gap-b {
+  grid-gap: 0 $gap;
+}
+.no-gap-sides {
+  grid-gap: $gap 0;
+}
+
+// align center
+// place-"vertical"-"horizontal"
+@mixin placement($align, $justify) {
+  display: grid;
+  align-items: $align;
+  justify-items: $justify;
+}
+// obs: do not work on grid
+@mixin justify($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+.place-t-l {
+  @include placement(top, start);
+}
+.place-t-c {
+  @include placement(top, center);
+}
+.place-t-r {
+  @include placement(top, end);
+}
+.place-c-c {
+  @include placement(center, center);
+}
+.place-c-r {
+  @include placement(center, end);
+}
+.place-c-l {
+  @include placement(center, start);
+}
+.place-b-l {
+  @include placement(end, start);
+}
+.place-b-c {
+  @include placement(end, center);
+}
+.place-b-r {
+  @include placement(end, end);
+}
+.justify-space-between {
+  @include justify(space-between);
+}
+.justify-space-around {
+  @include justify(space-around);
+}
+.justify-space-center {
+  @include justify(center);
+}
+/////// GRID END ///////

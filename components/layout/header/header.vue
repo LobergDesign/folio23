@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="main-nav">
     <ul>
       <li>
         <nuxt-link to="/">home</nuxt-link>
@@ -16,4 +16,4 @@
 
 <script setup lang="ts"></script>
 
-<style scoped></style>
+<style src="./header.scss" scoped />

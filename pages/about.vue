@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <main>
     <div>Page: about</div>
-    <organisms-topbar />
-  </div>
+  </main>
 </template>
 <script lang="ts" setup></script>

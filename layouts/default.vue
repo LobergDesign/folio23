@@ -1,14 +1,15 @@
 <template>
   <div>
-    <organisms-header />
+    <layout-topbar />
+    <layout-header />
     <slot />
     <pre>
       appConfig: {{ appConfig }}
     </pre>
+    <intermediateExample />
   </div>
 </template>
 <script setup>
-import IconArrow from "~/assets/icons/arrow.svg";
 const appConfig = useAppConfig();
 // useBugsnag().notify("Some Error");
 useHead({

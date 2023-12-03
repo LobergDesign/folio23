@@ -31,8 +31,8 @@ export default defineNuxtConfig({
     },
   },
   purgecss: {
-    enabled: true, // Always enable purgecss
-    safelist: ["nuxt-icon, weather-icon"], // Add my-class token to the safelist (e.g. .my-class)
+    enabled: false, // Always enable purgecss
+    safelist: [".nuxt-icon", ".weather-icon"], // Add my-class token to the safelist (e.g. .my-class)
   },
   googleFonts: {
     families: {

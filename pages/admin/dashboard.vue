@@ -1,11 +1,11 @@
 <template>
-  <div v-if="result">
+  <main v-if="result">
     <div>Page: Dashboard</div>
     <pre>
   useFetch:  {{ result }}
   </pre
     >
-  </div>
+  </main>
 </template>
 <script lang="ts" setup>
 const result = await GqlGetFrontpage();

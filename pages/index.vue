@@ -1,5 +1,5 @@
 <template>
-  <div v-if="data">
+  <main v-if="data">
     <div>Page: home</div>
 
     <pre>
@@ -7,7 +7,7 @@
   </pre
     >
     <div v-html="data.frontpage.heroSection.title.html"></div>
-  </div>
+  </main>
 </template>
 <script lang="ts" setup>
 const data = await useFrontpage();

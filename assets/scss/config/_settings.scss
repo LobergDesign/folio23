@@ -1,8 +1,14 @@
-$color-primary: #1c1c1c;
-$color-secondary: #ebebeb;
+$color-main-dark: #32302f;
+$color-main-light: #dadada;
+$color-alternative: teal;
 
 // transitions
 $transition--cubic: cubic-bezier(0.4, 0, 0, 1);
+// --transitions-motion: 0.3s cubic-bezier(0.2, 1, 0.2, 1);
+
+// --transitions-smooth: 0.4s cubic-bezier(0.9, 0, 0.05, 1);
+
+// --transitions-overshoot: 0.4s cubic-bezier(0.65,-0.36,0.39,1.32);
 $transition: 0.5s $transition--cubic;
 $transition--slow: 0.7s $transition--cubic;
 $transition--fast: 0.4s $transition--cubic;

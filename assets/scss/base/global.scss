@@ -1,6 +1,31 @@
+// light default theme
+:root {
+  --color-primary: #{$color-main-light};
+  --color-secondary: #{$color-main-dark};
+  --color-alternative: #{$color-alternative};
+}
+.dark-mode {
+  // --color-primary: #{$color-main-light};
+  // --color-secondary: #{$color-main-dark};
+  --color-primary: #{$color-main-dark};
+  --color-secondary: #{$color-main-light};
+}
+html {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+}
+
 body {
   font-size: clamp(14px, 4vw, 16px);
-  color: $color-primary;
-  background-color: $color-secondary;
   font-family: Inter, sans-serif;
+  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+main {
+  background-color: var(--color-primary);
 }
