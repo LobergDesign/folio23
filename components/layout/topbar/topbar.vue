@@ -1,12 +1,15 @@
 <template>
-  <aside>
-    <h1 v-if="openMeteoPending">Loading comments...</h1>
-
-    <div v-else>
-      {{ openMeteoData }}
+  <aside class="topbar">
+    <div class="grid">
+      <div class="row">
+        <div class="col-6">jean loberg®</div>
+        <div class="col-6"></div>
+      </div>
     </div>
+    <h1 v-if="!pending"></h1>
+    {{ pending }}
 
-    <div v-if="!openMeteoPending && openMeteoData">
+    <div v-if="!pending && openMeteoData">
       <!-- useWeather: {{ openMeteoData }} -->
       icon:
       <atoms-weather-icon
@@ -25,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-const { data: openMeteoData, pending: openMeteoPending } = await useOpenMeteo();
+const { data: openMeteoData, pending } = await useOpenMeteo();
 </script>
 
 <style src="./topbar.scss" scoped />

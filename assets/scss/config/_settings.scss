@@ -25,3 +25,15 @@ $viewport-max: 1920px; // 1920px
 $grid-max-width: 1680px;
 $grid-max-content-width: 1615px;
 $grid-min-width: 370px;
+
+// fonts
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("/fonts/CabinetGrotesk-Variable.ttf") format("truetype-variations");
+  font-weight: 100 200 300 400 500 600 700 800 900; /* Range of weights the font supports */
+  font-style: normal; /* or italic if your font supports it */
+}
+@mixin primary-font {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 500;
+}

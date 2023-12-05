@@ -6,7 +6,6 @@
     <pre>
       appConfig: {{ appConfig }}
     </pre>
-    <intermediateExample />
   </div>
 </template>
 <script setup>

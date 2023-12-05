@@ -20,7 +20,7 @@ html {
 
 body {
   font-size: clamp(14px, 4vw, 16px);
-  font-family: Inter, sans-serif;
+  @include primary-font;
   background-color: var(--color-secondary);
   color: var(--color-secondary);
   margin: 0;

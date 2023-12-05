@@ -14,7 +14,7 @@ $gap: clamp(1rem, 2vw, 2rem);
 $col: 12;
 
 // wrap
-.wrap {
+.grid {
   width: $wrap-width;
   max-width: $wrap-max-width;
   margin: 0 auto;
