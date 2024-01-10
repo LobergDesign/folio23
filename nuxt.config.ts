@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-purgecss",
     "nuxt-security",
+    "@nuxtjs/eslint-module",
     // "@nuxtjs/robots",
     // "nuxt-simple-sitemap",
   ],

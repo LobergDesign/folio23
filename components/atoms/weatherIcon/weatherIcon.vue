@@ -9,7 +9,7 @@ const props = withDefaults(
   }>(),
   {
     isDay: 1, // 1 is day, 0 is night
-  }
+  },
 );
 console.log("props.code", props.code);
 const setIcon = computed(() => {

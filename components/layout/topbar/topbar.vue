@@ -8,7 +8,6 @@
     </div>
     <h1 v-if="!pending"></h1>
     {{ pending }}
-
     <div v-if="!pending && openMeteoData">
       <!-- useWeather: {{ openMeteoData }} -->
       icon:

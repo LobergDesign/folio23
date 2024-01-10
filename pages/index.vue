@@ -1,7 +1,6 @@
 <template>
   <main v-if="data">
     <div>Page: home</div>
-
     <pre>
   data: {{ data }}
   </pre
@@ -11,7 +10,4 @@
 </template>
 <script lang="ts" setup>
 const data = await useFrontpage();
-
-console.log("data", data);
-// console.log("data result", data.result);
 </script>

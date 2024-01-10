@@ -18,7 +18,7 @@ const setTime = () => {
 
   // format the time in the desired format
   const timeInCopenhagen = new Intl.DateTimeFormat("en-DK", options).format(
-    now
+    now,
   );
 
   time.value = timeInCopenhagen;

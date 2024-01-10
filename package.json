@@ -6,14 +6,25 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/google-fonts": "^3.1.3",
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.5.1",
+    "@types/eslint": "^8",
     "@types/node": "^20.10.8",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "nuxt": "^3.9.1",
     "nuxt-graphql-client": "^0.2.31",
     "nuxt-icons": "^3.2.1",
@@ -22,8 +33,10 @@
     "nuxt-simple-sitemap": "^4.4.1",
     "nuxt-viewport": "^2.1.0",
     "pinia": "^2.1.7",
+    "prettier": "^3.1.1",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",
+    "typescript": "^5.3.3",
     "vue": "^3.4.7",
     "vue-router": "^4.2.5"
   }
