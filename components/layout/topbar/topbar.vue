@@ -6,10 +6,11 @@
         <div class="col-6"></div>
       </div>
     </div>
+
     <h1 v-if="!pending"></h1>
     {{ pending }}
+
     <div v-if="!pending && openMeteoData">
-      <!-- useWeather: {{ openMeteoData }} -->
       icon:
       <atoms-weather-icon
         v-if="
@@ -20,6 +21,7 @@
         :is-day="openMeteoData.current_weather.is_day"
       />
     </div>
+
     <client-only>
       <atoms-city-info />
     </client-only>
