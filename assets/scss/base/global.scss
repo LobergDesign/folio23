@@ -29,4 +29,7 @@ body {
 
 main {
   background-color: var(--color-primary);
+  margin-top: $top-bar-height;
+  border-top-right-radius: $border-large;
+  border-top-left-radius: $border-large;
 }

@@ -9,8 +9,9 @@
 </template>
 <script lang="ts" setup>
 const time = ref<string>();
-const now = new Date();
+
 const setTime = () => {
+  const now = new Date();
   // set the timezone to Copenhagen's timezone
   const options: Intl.DateTimeFormatOptions = {
     timeZone: "Europe/Copenhagen",
@@ -26,6 +27,7 @@ const setTime = () => {
   time.value = timeInCopenhagen;
 };
 const zone = computed(() => {
+  const now = new Date();
   // Create a Date object for January 1 and July 1 of the current year in Copenhagen
   const january = new Date(now.getFullYear(), 0, 1);
   const july = new Date(now.getFullYear(), 6, 1);
