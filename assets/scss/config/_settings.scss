@@ -1,13 +1,13 @@
-$color-main-dark: #32302f;
-$color-main-light: #dadada;
+$color-dark: #222;
+$color-dark-80: #333;
+$color-light: #dadada;
+$color-light-60: rgba($color-light, 0.6);
 $color-alternative: teal;
 
 // transitions
 $transition--cubic: cubic-bezier(0.4, 0, 0, 1);
 // --transitions-motion: 0.3s cubic-bezier(0.2, 1, 0.2, 1);
-
 // --transitions-smooth: 0.4s cubic-bezier(0.9, 0, 0.05, 1);
-
 // --transitions-overshoot: 0.4s cubic-bezier(0.65,-0.36,0.39,1.32);
 $transition: 0.5s $transition--cubic;
 $transition--slow: 0.7s $transition--cubic;
@@ -25,6 +25,9 @@ $viewport-max: 1920px; // 1920px
 $grid-max-width: 1680px;
 $grid-max-content-width: 1615px;
 $grid-min-width: 370px;
+
+// border
+$border-large: clamp(30px, 8vw, 70px);
 
 // fonts
 @font-face {

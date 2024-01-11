@@ -1,3 +1,9 @@
 .topbar {
-  color: var(--color-primary);
+  color: var(--color-secondary-60);
+  background-color: var(--color-secondary);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 25px;
 }

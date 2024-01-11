@@ -1,24 +1,23 @@
 <template>
-  <nuxt-icon class="weather-icon" :name="`weather/${setIcon}_icon`" filled />
+  <div class="weather-icon">
+    <nuxt-icon v-if="!pending" :name="`weather/${setIcon}_icon`" filled />
+    <div v-else></div>
+  </div>
 </template>
 <script lang="ts" setup>
-const props = withDefaults(
-  defineProps<{
-    code: number;
-    isDay: number;
-  }>(),
-  {
-    isDay: 1, // 1 is day, 0 is night
-  },
-);
-console.log("props.code", props.code);
+const currentWeather = ref<OpenMeteoNamespace.IWeather | null>(null);
+const { data: openMeteoData, pending } = await useOpenMeteo();
+if (openMeteoData.value) {
+  currentWeather.value = openMeteoData.value.current_weather;
+}
+
 const setIcon = computed(() => {
   // https://open-meteo.com/en/docs#hourly=temperature_2m,weathercode
   // icons: https://github.com/basmilius/weather-icons/blob/dev/design/fill/final/drizzle.svg
 
-  const dayCheck = props.isDay === 1;
+  const dayCheck = currentWeather.value?.is_day === 1;
 
-  switch (props.code) {
+  switch (currentWeather.value?.weathercode) {
     case 0:
       return dayCheck ? "clear-day" : "clear-night";
     case 1:

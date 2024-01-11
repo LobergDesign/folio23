@@ -1,14 +1,15 @@
 // light default theme
 :root {
-  --color-primary: #{$color-main-light};
-  --color-secondary: #{$color-main-dark};
+  --color-primary: #{$color-light};
+  --color-secondary: #{$color-dark};
+  --color-secondary-60: #{$color-light-60};
   --color-alternative: #{$color-alternative};
 }
 .dark-mode {
-  // --color-primary: #{$color-main-light};
-  // --color-secondary: #{$color-main-dark};
-  --color-primary: #{$color-main-dark};
-  --color-secondary: #{$color-main-light};
+  // --color-primary: #{$color-light};
+  // --color-secondary: #{$color-dark};
+  --color-primary: #{$color-dark};
+  --color-secondary: #{$color-light};
 }
 html {
   text-rendering: optimizeLegibility;

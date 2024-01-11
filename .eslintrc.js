@@ -13,11 +13,15 @@ module.exports = {
     "plugin:prettier/recommended",
     "prettier",
   ],
-  plugins: [],
+  plugins: ["@typescript-eslint", "prettier"],
   rules: {
     "linebreak-style": ["error", "unix"],
     "vue/multi-word-component-names": "off",
     "vue/no-v-html": "off",
-    quotes: ["error", "double"],
+    quotes: ["warn", "double"],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { ignoreRestSiblings: true, argsIgnorePattern: "^_" },
+    ],
   },
 };
