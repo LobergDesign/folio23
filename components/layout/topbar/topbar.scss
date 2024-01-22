@@ -5,5 +5,19 @@
   top: 0;
   right: 0;
   left: 0;
-  height: $top-bar-height;
+  height: $top-bar-height * 2;
+  transform: translateY(-$top-bar-height);
+  transition: transform $transition--fast;
+  &__site {
+    transform: translateY($top-bar-height / 2) scale(1);
+    transform-origin: top left;
+    transition: transform $transition;
+    will-change: transform;
+  }
+  &:hover {
+    transform: translateY(0);
+    .topbar__site {
+      transform: translateY(-4px) scale(1.13);
+    }
+  }
 }
