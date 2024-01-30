@@ -1,7 +1,6 @@
 $color-dark: #222;
 $color-dark-80: #333;
-$color-light: #dadada;
-$color-light-60: rgba($color-light, 0.6);
+$color-light: #ececec;
 $color-alternative: teal;
 
 // transitions
@@ -30,7 +29,7 @@ $grid-min-width: 370px;
 $border-large: clamp(30px, 8vw, 70px);
 
 // topbar
-$top-bar-height: 25px;
+$top-bar-height: 35px;
 
 // fonts
 @font-face {
